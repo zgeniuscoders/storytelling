@@ -8,4 +8,11 @@
     <string name="home">Accueil</string>
     <string name="add">Ajoiuer</string>
     <string name="loading_txt">Telecharment</string>
+    <string name="title">Story telling</string>
+    <string name="content">Lorem ipsum dolor isit tolor ipsum lorem solor thuis lorem piscum</string>
+    <string name="recommendation">Recommendation</string>
+    <string name="your_daily">Your daily</string>
+    <string name="category_name">category 1</string>
+    <string name="time_ago">il ya 20 minutes</string>
+    <string name="editor_name">par zgeniuscoders</string>
 </resources>

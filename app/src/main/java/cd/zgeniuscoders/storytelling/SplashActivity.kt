@@ -28,6 +28,7 @@ class SplashActivity : AppCompatActivity() {
             // Lancer l'activité principale de votre application ici
             Intent(this, MainActivity::class.java).apply {
                 startActivity(this)
+                finish()
             }
         }.start()
 

@@ -23,7 +23,7 @@ import java.util.*
 
 class AddStoryFragment : Fragment() {
     private lateinit var binding: FragmentAddStoryBinding
-    var coverImage: Uri? = null
+    private var coverImage: Uri? = null
     var coverImageUrl: String? = ""
     lateinit var dialog: Dialog
 
