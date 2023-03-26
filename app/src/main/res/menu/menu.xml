@@ -5,10 +5,12 @@
     <item
         android:id="@id/homeFragment"
         android:title="@string/home"
-        android:icon="@drawable/home" />
+        android:icon="@drawable/home"
+        app:showAsAction="never"/>
 
     <item
         android:id="@id/addStoryFragment"
         android:icon="@drawable/pen"
-        android:title="@string/add" />
+        android:title="@string/add"
+        app:showAsAction="never"/>
 </menu>

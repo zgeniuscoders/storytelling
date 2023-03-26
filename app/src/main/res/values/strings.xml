@@ -7,4 +7,5 @@
     <string name="story_content">Contenu</string>
     <string name="home">Accueil</string>
     <string name="add">Ajoiuer</string>
+    <string name="loading_txt">Telecharment</string>
 </resources>
