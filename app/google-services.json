@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "978134323252",
+    "project_id": "storytelling-ffa6c",
+    "storage_bucket": "storytelling-ffa6c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:978134323252:android:b422348735f2018710ba61",
+        "android_client_info": {
+          "package_name": "cd.zgeniuscoders.storytelling"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "978134323252-fhpu9ih1m5co8goqni54sdm66bk0klgp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9uC_Dthz8KECeH93W390nd7uort84-hg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "978134323252-fhpu9ih1m5co8goqni54sdm66bk0klgp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
