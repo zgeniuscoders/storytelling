@@ -4,13 +4,30 @@
 
     <item
         android:id="@id/homeFragment"
-        android:title="@string/home"
         android:icon="@drawable/home"
-        app:showAsAction="never"/>
+        android:title="@string/home"
+        app:showAsAction="never" />
+    <item
+        android:id="@id/storyFragment"
+        android:icon="@drawable/baseline_menu_book_24"
+        android:title="@string/book"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@id/favoriteFragment"
+        android:icon="@drawable/baseline_favorite_24"
+        android:title="@string/favorite"
+        app:showAsAction="never" />
 
     <item
         android:id="@id/addStoryFragment"
         android:icon="@drawable/pen"
         android:title="@string/add"
-        app:showAsAction="never"/>
+        app:showAsAction="never" />
+
+    <item
+        android:id="@id/settingFragment"
+        android:icon="@drawable/baseline_settings_24"
+        android:title="@string/settings"
+        app:showAsAction="never" />
 </menu>

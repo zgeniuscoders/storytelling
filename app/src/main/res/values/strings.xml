@@ -15,4 +15,8 @@
     <string name="category_name">category 1</string>
     <string name="time_ago">il ya 20 minutes</string>
     <string name="editor_name">par zgeniuscoders</string>
+    <string name="book">Histoires</string>
+    <string name="settings">Parametres</string>
+    <string name="favorite">Favory</string>
+    <string name="your_favorite">Vos histoires favori</string>
 </resources>

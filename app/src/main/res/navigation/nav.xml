@@ -15,4 +15,19 @@
         android:name="cd.zgeniuscoders.storytelling.fragments.AddStoryFragment"
         android:label="fragment_add_story"
         tools:layout="@layout/fragment_add_story" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="cd.zgeniuscoders.storytelling.fragments.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="cd.zgeniuscoders.storytelling.fragments.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/storyFragment"
+        android:name="cd.zgeniuscoders.storytelling.fragments.StoryFragment"
+        android:label="fragment_story"
+        tools:layout="@layout/fragment_story" />
 </navigation>

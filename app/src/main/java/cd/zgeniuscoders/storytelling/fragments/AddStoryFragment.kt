@@ -15,6 +15,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import cd.zgeniuscoders.storytelling.R
 import cd.zgeniuscoders.storytelling.databinding.FragmentAddStoryBinding
 import cd.zgeniuscoders.storytelling.models.Story
+import cd.zgeniuscoders.storytelling.repositories.StoryRepository
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
@@ -56,12 +57,12 @@ class AddStoryFragment : Fragment() {
             val edtTitle = binding.edtTitle.toString()
             val edtContent = binding.edtContent.toString()
 
-            if (edtTitle.isNotEmpty() && edtContent.isNotEmpty()) {
+            if (edtTitle.isNotEmpty() && edtContent.isNotEmpty() && coverImage != null) {
                 uploadImage()
             } else {
                 Toast.makeText(
                     requireContext(),
-                    "Veuillez remplir tout les champs si vous plait",
+                    "Veuillez remplir tout les champs",
                     Toast.LENGTH_LONG
                 ).show()
             }
@@ -84,6 +85,7 @@ class AddStoryFragment : Fragment() {
                 it.storage.downloadUrl.addOnSuccessListener { image ->
                     coverImageUrl = image.toString()
                     saveData()
+                    dialog.dismiss()
                 }
             }.addOnFailureListener {
                 dialog.dismiss()
@@ -97,14 +99,18 @@ class AddStoryFragment : Fragment() {
         val currentDate = Calendar.getInstance().time
         val dateString = SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(currentDate)
 
+        val storyRepository = StoryRepository()
+
         val data =
             Story(
-                binding.edtTitle.toString(),
-                binding.edtContent.toString(),
+                storyRepository.getKey(),
+                binding.edtTitle.text.toString(),
+                binding.edtContent.text.toString(),
                 coverImageUrl!!,
                 dateString
             )
-        Firebase.firestore.collection("stories").document().set(data)
+        storyRepository.create(data)
+
     }
 
 }

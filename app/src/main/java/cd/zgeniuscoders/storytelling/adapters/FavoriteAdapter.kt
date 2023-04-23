@@ -1,21 +1,19 @@
 package cd.zgeniuscoders.storytelling.adapters
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import cd.zgeniuscoders.storytelling.databinding.ItemStoryBinding
 import cd.zgeniuscoders.storytelling.models.Favorite
 import cd.zgeniuscoders.storytelling.models.Story
-import cd.zgeniuscoders.storytelling.repositories.FavoriteRepository
+import cd.zgeniuscoders.storytelling.repositories.StoryRepository
 import com.bumptech.glide.Glide
 
 
-class StoryAdapter(private val context: Context, private val list: ArrayList<Story>) :
-    Adapter<StoryAdapter.StoryViewHolder>() {
+class FavoriteAdapter(private val context: Context, private val list: ArrayList<Favorite>) :
+    Adapter<FavoriteAdapter.StoryViewHolder>() {
     inner class StoryViewHolder(binding: ItemStoryBinding) :
         RecyclerView.ViewHolder(binding.root) {
         val binding = ItemStoryBinding.bind(binding.root)
@@ -30,23 +28,20 @@ class StoryAdapter(private val context: Context, private val list: ArrayList<Sto
         return list.size
     }
 
-    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: StoryViewHolder, position: Int) {
+        val favorite = list[position]
+        val storyRepository = StoryRepository()
 
-        val story = list[position]
-
-        holder.binding.title.text = story.title
-        holder.binding.content.text = "${story.content.substring(0, 90)} ..."
-        Glide.with(context).load(story.image).into(holder.binding.coverImage)
-
-        holder.binding.addFavoriteBtn.setOnClickListener {
-            val favorite = Favorite("", list[position].id)
-            FavoriteRepository().create("", favorite)
-            Toast.makeText(
-                context,
-                "${story.title} a été mis dans vos histoires favorite",
-                Toast.LENGTH_SHORT
-            ).show()
+        storyRepository.findById(favorite.storyId).addSnapshotListener { value, error ->
+            if (error != null) return@addSnapshotListener
+            if (value != null) {
+                val story = value.toObject(Story::class.java)
+                holder.binding.title.text = story!!.title
+                holder.binding.content.text = "${story.content.substring(0, 90)} ..."
+                Glide.with(context).load(story.image).into(holder.binding.coverImage)
+            }
         }
+
+
     }
 }

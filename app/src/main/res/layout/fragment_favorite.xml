@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
     android:orientation="vertical"
-    tools:context=".fragments.HomeFragment">
+    tools:context=".fragments.FavoriteFragment">
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,29 +21,10 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
         android:layout_marginBottom="15dp"
-        android:text="@string/recommendation"
+        android:text="@string/your_favorite"
         android:textColor="#ffffff"
         android:textSize="26sp"
         android:textStyle="bold" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/best_story_recycler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_best_story" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/category_recycler"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:orientation="horizontal"
-        android:paddingHorizontal="10dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_category" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/story_recycler"
@@ -52,6 +32,5 @@
         android:layout_height="match_parent"
         android:layout_marginHorizontal="10dp"
         tools:listitem="@layout/item_story" />
-
 
 </LinearLayout>
