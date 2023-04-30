@@ -19,4 +19,11 @@
     <string name="settings">Parametres</string>
     <string name="favorite">Favory</string>
     <string name="your_favorite">Vos histoires favori</string>
+    <string name="username">Jhone Doe</string>
+    <string name="update_delete_stories">Modifier ou supprimer vos histoires</string>
+    <string name="story_txt">Mes histoires</string>
+    <string name="followers_txt">Mes abonner</string>
+    <string name="account_txt">Mon compte</string>
+    <string name="account_desc">Modifier votre nom,supprimer votre compte...</string>
+    <string name="edit">editer</string>
 </resources>

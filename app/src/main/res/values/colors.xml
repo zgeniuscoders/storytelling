@@ -11,4 +11,5 @@
     <color name="background">#051E34</color>
     <color name="primary">#5486D3</color>
     <color name="gray">#CDD2D8</color>
+    <color name="sub_background">#052440</color>
 </resources>

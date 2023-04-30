@@ -13,8 +13,6 @@ class SplashActivity : AppCompatActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         binding.progressBar.progress = 0
 
-        supportActionBar?.hide()
-
         Thread {
             try {
                 for (progress in 0..100) {
